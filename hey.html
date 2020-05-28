@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=deviice-width, initial-scale=1.0">
+    <title>flexbox</title>
+	<style>
+	*{
+	box-sizing:border-box;}
+	
+	.nav{
+	display:flex;
+	width:100%;
+	height:50px;
+	border:3px solid gray;
+	padding:5px;
+	margin:0px ;
+	background-color: rgb(71, 144, 239);
+	box-sizing:border-box;}
+	
+	@media(max-width:900px){
+	.nav {background-color:yellow;}}
+	
+	@media(max-width:500px){
+	.nav {background-color:pink;}}
+	
+	@media(max-width:200px){
+	.nav {background-color:green;}}
+	
+	@media(max-width:90px){
+	.nav {background-color:orange;}}
+	
+	.brand{flex-basis:75%;
+	font-size:30px;
+	flex-grow:1;
+	flex-shrink:1;
+	text-decoration: overline;
+	font-weight:bold;}
+	
+	#dd{
+	visibility:hidden;
+	text-decoration:underline;
+	font-size:20px;
+	}
+	
+	.brand:hover #dd{
+	visibility:visible;}
+	
+	.links{
+	text-align:right;
+	flex-basis:50%;
+	flex-grow:1;
+	flex-shrink:1;
+	}
+	
+	.link1{
+	display:inline-block;
+	padding:10px;
+	margin:0;
+	font-size:20px;
+	}
+	
+	.link2{
+	display:inline-block;
+	padding:10px;
+	margin:0;
+	font-size:20px;}
+	
+	.flexbox{
+	display:flex;
+	border:3px solid gray;
+	height:auto;
+	font-weight:bold;
+	font-size:20px;
+	padding:20px;
+	margin:auto;
+	flex-grow:1;
+	flex-shrink:1;}
+	
+	.col{
+	border:1px solid gray;
+	flex-basis:33%;
+	text-align:center;
+	height:auto;
+	}
+	
+	.col1{
+	background:linear-gradient(to left bottom, rgba(150,134,255,0.773), rgba(191,207,255,0.653));
+	flex-basis:25%;
+	flex-grow:0;}
+	.col2{background-color:rgb(225, 233, 238);
+	flex-basis:50%;}
+	.col3{
+	flex-basis:25%;
+	padding:7px;
+	background:linear-gradient(to right bottom, rgba(150,134,255,0.773), rgba(191,207,255,0.653));}
+	
+	img{
+	height:auto;
+	width:100%;}
+	
+	
+	.text1, .ai, .webd, .ashish{
+	margin:0;
+	padding:0;}
+	
+	li{
+	padding:5px;
+	mrgin:2px;
+	border:2px solid white;}
+	
+ .video {
+  position: relative;
+  height: 0;
+  overflow: hidden;}
+
+ .video-16x9 {
+  padding-bottom: 56.25%;
+}
+
+ .video-4x3 {
+  padding-bottom: 75%;
+}
+
+ .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.inside{
+padding:20px;
+margin:5px;}
+
+
+	</style>
+</head>
+<body>
+    <nav class="nav">
+	<div class="brand"><a href="sbb">ABP NEWS</a><div id="dd">aapko rakhe aage!!</div></div>
+	<div class="links">
+	<a class="link1" href="nd">Sign up</a>
+	<a  class="link2" href="j">Log in</a></div>
+	</nav>
+	<div class="flexbox">
+	<div class="col col1">ADVERTISEMENT
+	<div class="img11"><a href="https://www.linkedin.com/home"><img src="img1.jpg"></a><h6 class="text1">LinkedIn is the world's 
+	largest professional network on the internet. You can use LinkedIn to find the right job or
+	internship, connect and strengthen professional relationships ,
+	and learn the skills you need to succeed in your career.</h6></div>
+	<div class="img22"><a href="https://forum.duolingo.com/comment/14461224/url"><img src="imgg2.jpg"></a></div></div>
+	<div class="col col2">LATEST TODAY<div class="news">
+	<ul>
+	<li><a href="https://www.linkedin.com/feed/news/coronavirus-official-updates-4791420/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed_storyline%3BUVxO8yIDQ5qmOkjCofzT7A%3D%3D">Coronavirus:Official updates</a></li>
+	<li><a href="https://www.linkedin.com/feed/news/worst-locust-attack-in-27-years-4845948/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed_storyline%3BmLyN5FH7RraZPwOSIvXXMQ%3D%3D">Worst locust attack in 27 years</li>
+	<li><a href="https://www.linkedin.com/feed/news/how-luxury-hotel-stays-will-change-5210042/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed_storyline%3BmLyN5FH7RraZPwOSIvXXMQ%3D%3D">How luxary hotel stays will change?</a></li>
+	<li><a href="https://www.linkedin.com/feed/news/mallya-seeks-uk-asylum-reports-5205178/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed_storyline%3BDWkHPu7OTKalKwNl61WDOw%3D%3D">Mallya seeks UK asylum reports</li>
+	<li><a href="https://www.linkedin.com/feed/news/ola-unit-buys-dutch-e-scooter-firm-5204466/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed_storyline%3BDWkHPu7OTKalKwNl61WDOw%3D%3D">Ola unit buys Dutch e-scooter firm</a></li>
+	
+	</ul></div></div>
+	<div class="col col3">FAMOUS BLOGS
+	<div class="video video-16x9 video-4x3"><iframe class="inside" width="644" height="362" src="https://www.youtube.com/embed/yoO2xGBHjJI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h6 class="ai">AI startups in India!!</h6></div>
+	<div class="video video-16x9 video-4x3"><iframe class="inside"  width="715" height="402" src="https://www.youtube.com/embed/SPOYAO615dA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h6 class="webd">When are you starting to develop your own website?</h6></div>
+	<div class="video video-16x9 video-4x3"><iframe class="inside" width="644" height="362" src="https://www.youtube.com/embed/eyH0g_kPyP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h6 class="ashish">Clear doubts from your very own teachers:)</h6></div>
+	</div>
+</body>
+</html>
